@@ -28,10 +28,10 @@ import roll
 let resultado: seq[int] = roll("1d20") # Roda um dado de 20 faces
 echo resultado # Mostra todos os valores
 
-## Ou usando a sintaxe do nim com o input do usuário
+# Ou usando a sintaxe do nim com o input do usuário
 
 let input: string = stdin.readLine()
-let resultado: seq[int] = input.roll() ## Rola o input do usuário
+let resultado: seq[int] = input.roll() # Rola o input do usuário
 echo resultado # Mostra o resultado
 
 ```
