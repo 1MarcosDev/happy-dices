@@ -14,7 +14,7 @@ Ao rodar o programa no seu terminal Unix ou Windows, uma simples interface de di
 ## Como compilar?
 O Happy Dices foi feito usando a linguagem de programação Nim. Para compilar, basta baixar o nim no [site oficial](https://nim-lang.org/), e digitar o comando:
 ```sh
-nim c -d:release -o HappyDices main.nim
+nim c -d:release -o:HappyDices main.nim
 ```
 
 ## Extensão do projeto
