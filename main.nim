@@ -23,7 +23,7 @@ echo """
 echo "Roll your dices, and put your choices in the hands of the universe!".underline.fgMagenta
 echo "or press 'q' to quit...".fgCyan
 
-let invalid = AllChars - Digits - {'d', 'q'}
+let invalid = AllChars - Digits - {'d', 'q', '+'}
 
 while true:
 
@@ -40,21 +40,15 @@ while true:
   if input.find(invalid) == -1:
     let res: seq[int] = input.roll
 
-    if res.len == 1:
-     stdout.write "Your dice is: ".fgLightRed
-     stdout.write fmt"[{res[0]}]".fgLightMagenta
-     echo ""
-     
-    else:
-      var total: int = 0
+    var total: int = 0
     
-      stdout.write "Your dices is: ".fgLightRed
+    stdout.write "Your dices is: ".fgLightRed
     
-      for d in res:
-        total += d
-        stdout.write fmt"[{d}] ".fgLightMagenta
+    for d in res:
+      total += d
+      stdout.write fmt"[{d}] ".fgLightMagenta
 
-      echo fmt"Totalizing: {total}".fgLightBlue
+    echo fmt"Totalizing: {total + readSum(input)}".fgLightBlue
       
   else:
     echo "Invalid input".underline.fgRed
