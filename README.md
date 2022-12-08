@@ -34,4 +34,8 @@ let input: string = stdin.readLine()
 let resultado: seq[int] = input.roll() # Rola o input do usuário
 echo resultado # Mostra o resultado
 
+# Para ler os inputs de soma, basta passar a seguinte função como parâmetro
+
+echo input.readSum()
+
 ```
